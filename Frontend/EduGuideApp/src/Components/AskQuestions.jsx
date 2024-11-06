@@ -31,10 +31,10 @@ const educationalOptions = {
 const AskQuestions = ({ category }) => {
   const [selectedOption, setSelectedOption] = useState(""); // Initialize with an empty string
   const [re, setRe] = useState(null);
-
+  console.log(category);
   // Check if the selected category is valid
   const options = educationalOptions[category];
-
+  console.log(options);
   useEffect(() => {
     // Reset the recommended course whenever category changes
     setRe(null);
