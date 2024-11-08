@@ -4,6 +4,7 @@ import React, { useState } from "react";
 const StudentDetailsForm = () => {
   const [formData, setFormData] = useState({
     name: "",
+    age: "",
     hobbies: "",
     preference: "",
     nationality: "",
@@ -21,7 +22,13 @@ const StudentDetailsForm = () => {
     e.preventDefault();
     // Handle form submission logic here
     alert("Student details submitted successfully!");
-
+    setFormData({
+      name: "",
+      age: "",
+      hobbies: "",
+      preference: "",
+      nationality: "",
+    });
     // You can replace this with any API call or further processing
     console.log(formData);
   };
@@ -49,14 +56,14 @@ const StudentDetailsForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="name" className="block text-gray-700 mb-2">
+              <label htmlFor="age" className="block text-gray-700 mb-2">
                 Age
               </label>
               <input
                 type="number"
-                id="name"
-                name="name"
-                value={formData.name}
+                id="age"
+                name="age"
+                value={formData.age}
                 onChange={handleChange}
                 className="w-full p-2 border border-gray-300 rounded-md"
                 required
@@ -78,7 +85,7 @@ const StudentDetailsForm = () => {
               />
             </div>
 
-            <div>
+            {/* <div>
               <label htmlFor="preference" className="block text-gray-700 mb-2">
                 Preference
               </label>
@@ -91,7 +98,7 @@ const StudentDetailsForm = () => {
                 className="w-full p-2 border border-gray-300 rounded-md"
                 required
               />
-            </div>
+            </div> */}
 
             <div>
               <label htmlFor="nationality" className="block text-gray-700 mb-2">
