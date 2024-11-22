@@ -9,19 +9,23 @@ import Footer from "./Components/Footer";
 import RegisterPage from "./Components/RegisterPage";
 import LoginPage from "./Components/LoginPage";
 import Stu from "./Components/Stu";
+
 function App() {
   return (
     <Router>
       <div className="">
         <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Stu" element={<Stu />} />
-          <Route path="/Quiz" element={<QUiz />} />
-          <Route path="/Register" element={<RegisterPage />} />
-          <Route path="/Login" element={<LoginPage />} />
-          {/* Add more routes as necessary */}
-        </Routes>
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Stu" element={<Stu />} />
+            <Route path="/Quiz" element={<QUiz />} />
+            <Route path="/Register" element={<RegisterPage />} />
+            <Route path="/Login" element={<LoginPage />} />
+            {/* Add more routes as necessary */}
+          </Routes>
+        </div>
+
         <Footer />
       </div>
     </Router>
