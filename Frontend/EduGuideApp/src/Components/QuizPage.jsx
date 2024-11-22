@@ -195,7 +195,7 @@ const CareerQuiz = () => {
 
   return (
     <div
-      className="quiz-container mx-auto p-6 mb-20 flex flex-col justify-between"
+      className="quiz-container mx-20 w-full md:p-6 p-10 mb-20 flex flex-col justify-between"
       style={{ minHeight: "500px" }}
     >
       {result ? (

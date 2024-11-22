@@ -6,9 +6,9 @@ const HomePage = () => {
   return (
     <>
       <div className="min-h-screen flex items-center justify-center bg-white px-6 md:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 md:gap-12 items-center text-center md:text-left">
           {/* Text Section */}
-          <div className="flex flex-col justify-around gap-6 pl-20 col-span-2">
+          <div className="flex flex-col justify-around gap-6 md:pl-20 col-span-2">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 tracking-widest leading-tight ">
               EduGuide
             </h1>
@@ -19,7 +19,7 @@ const HomePage = () => {
               Explore a wide range of courses to kick-start your career.
             </p>
             <Link to="/Quiz">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+              <button className="bg-blue-600 hover:drop-shadow-xl  text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
                 Get Started
               </button>
             </Link>
@@ -56,7 +56,7 @@ const HomePage = () => {
         {/* Text Section */}
         <div className="w-full md:w-2/3 bg-white py-12 px-6 text-center md:text-left space-y-8 text-gray-800">
           <h2 className="text-3xl font-bold text-gray-900">
-            How to Choose the Right Path
+            How to Choose the Right Path ?
           </h2>
 
           {/* HSE (10+2) as a Foundation */}

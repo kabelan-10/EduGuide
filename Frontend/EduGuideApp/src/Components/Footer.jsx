@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 p-6  w-full text-white">
+    <footer className="bg-blue-600 p-6 static bottom-0 w-full text-white">
       <div className="flex justify-between items-center">
         {/* Left side - branding or message */}
         <p className="text-sm">
@@ -15,7 +15,7 @@ const Footer = () => {
           <Link to="/" className="hover:text-gray-300">
             Home
           </Link>
-          <Link to="/about" className="hover:text-gray-300">
+          <Link to="/Quiz" className="hover:text-gray-300">
             Try MCQs
           </Link>
         </div>
