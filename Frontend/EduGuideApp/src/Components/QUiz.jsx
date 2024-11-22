@@ -18,7 +18,7 @@ function QUiz() {
 
   return (
     cookies.email && (
-      <div className="min-h-screen w-full flex flex-col justify-center items-center">
+      <div className="min-h-screen w-dvw flex flex-col justify-center items-center ">
         <p className="text-base md:text-xl flex flex-col text-center mt-40 font-bold mx-10 md:mx-32 mb-3">
           <span>Welcome to the Quiz Page!</span>
           <span>

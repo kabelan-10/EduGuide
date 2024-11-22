@@ -2,29 +2,39 @@ import React, { useState, useEffect } from "react";
 
 const educationalOptions = {
   "CS,Physics,Chemistry,Mathematics": {
-    HSE: "HSE (PCM)",
-    Diploma: "Diploma in Engineering",
-    Vocational: "Vocational Course (Networking)",
+    HSE: "HSE (PCM) - High School Education (HSE) with a focus on Physics, Chemistry, and Mathematics is a popular choice for students interested in engineering, technology, or sciences. This track prepares students for further studies in fields like engineering, computer science, or physical sciences.",
+    Diploma:
+      "Diploma in Engineering - A practical, hands-on program that prepares students for technical roles in engineering fields such as mechanical, electrical, civil, or computer engineering. This diploma usually focuses on practical skills and knowledge required for entry-level engineering jobs or as a foundation for further study.",
+    Vocational:
+      "Vocational Course (Networking) - A specialized course that covers networking concepts, configurations, and troubleshooting. Students learn about network infrastructure, security, and protocols, preparing them for roles in IT networking, technical support, or as network administrators.",
   },
   "Biology,Physics,Chemistry,Mathematics": {
-    HSE: "HSE (PCB)",
-    Diploma: "Diploma in Healthcare",
-    Vocational: "Vocational (MLT)",
+    HSE: "HSE (PCB) - High School Education with a focus on Physics, Chemistry, and Biology is geared toward students interested in medicine, life sciences, and healthcare-related fields. This curriculum prepares students for courses in biology, biotechnology, pharmacy, or medical fields.",
+    Diploma:
+      "Diploma in Healthcare - A vocational course designed for those interested in working in healthcare. It covers subjects like patient care, medical terminology, and basic healthcare practices. This diploma is suitable for entry-level healthcare roles and can be a stepping stone to further medical training.",
+    Vocational:
+      "Vocational (MLT) - This vocational program focuses on laboratory skills required in medical diagnostics. Students learn about specimen collection, lab techniques, and equipment handling, preparing them for roles as medical laboratory technicians or assistants in clinical labs.",
   },
   "Humanities and Social Sciences": {
-    HSE: "HSE (Commerce)",
-    Diploma: "Diploma in IT",
-    Vocational: "Vocational (Entrepreneurship)",
+    HSE: "HSE (Commerce) - High School Education in Commerce focuses on subjects like economics, business studies, and accountancy. It prepares students for careers in business, finance, and social sciences and is a foundation for studying accounting, business management, or law.",
+    Diploma:
+      "Diploma in IT - A diploma in Information Technology provides foundational knowledge in software development, data handling, and networking. This track is ideal for students interested in entry-level IT roles or who want to pursue advanced studies in computer science or IT.",
+    Vocational:
+      "Vocational (Entrepreneurship) - This course introduces students to the basics of entrepreneurship, including business planning, marketing, and management. It is designed for those interested in starting or managing a small business or working in entrepreneurial roles.",
   },
   "Arts and Communication": {
-    HSE: "HSE (Arts)",
-    Diploma: "Diploma in Fashion Design",
-    Vocational: "Vocational (Graphic Design)",
+    HSE: "HSE (Arts) - High School Education in Arts typically includes subjects like literature, history, sociology, and fine arts. This curriculum is ideal for students interested in careers in media, arts, design, and social sciences and can lead to further study in liberal arts or humanities.",
+    Diploma:
+      "Diploma in Fashion Design - A practical program that teaches the basics of fashion design, pattern-making, and garment construction. This diploma is suited for students interested in careers in fashion, apparel design, or the textile industry.",
+    Vocational:
+      "Vocational (Graphic Design) - This vocational course focuses on design principles, digital illustration, and media design. Students learn about software like Adobe Photoshop, Illustrator, and InDesign, preparing them for careers in graphic design, digital media, and content creation.",
   },
   "Business,Economics,Accountancy": {
-    HSE: "HSE (Humanities)",
-    Diploma: "Diploma in Social Work",
-    Vocational: "Vocational (Child Education)",
+    HSE: "HSE (Humanities) - High School Education in Humanities covers a range of social science subjects, including economics, political science, and history. It’s suitable for students interested in law, business, public administration, or social work and sets the foundation for further study in social sciences.",
+    Diploma:
+      "Diploma in Social Work - This diploma provides foundational knowledge in social work practices, community engagement, and counseling. It’s geared toward students interested in helping professions and prepares them for entry-level roles in social services or as a base for further studies.",
+    Vocational:
+      "Vocational (Child Education) - This course introduces concepts in early childhood education, including child psychology, lesson planning, and classroom management. It prepares students for roles in childcare, early childhood education, or preschool teaching.",
   },
 };
 
@@ -56,7 +66,7 @@ const AskQuestions = ({ category }) => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className=" max-w-lg mx-auto p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-semibold text-center text-gray-800 mb-4">
         Choose Your Path
       </h2>
@@ -121,14 +131,19 @@ const AskQuestions = ({ category }) => {
         </button>
       </div>
 
-      {re && (
-        <div className="mt-6 text-center">
-          <p className="text-xl font-semibold flex flex-col text-gray-800">
-            <span> Recommended Course: </span>
-            <span className="text-blue-500">{re}</span>
-          </p>
-        </div>
-      )}
+      {re &&
+        (() => {
+          const arr = re.split("-");
+          return (
+            <div className="mt-6 text-center">
+              <p className="text-xl font-semibold gap-3 flex flex-col text-gray-800">
+                <span>Recommended Course:</span>
+                <span className="text-blue-500">{arr[0]}</span>
+                <span className="text-gray-500">{arr[1]}</span>
+              </p>
+            </div>
+          );
+        })()}
     </div>
   );
 };

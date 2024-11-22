@@ -195,14 +195,15 @@ const CareerQuiz = () => {
 
   return (
     <div
-      className="quiz-container mx-20 w-full md:p-6 p-10 mb-20 flex flex-col justify-between"
+      className="quiz-container  md:mx-20 w-full ml-10
+       md:p-6  mb-20 flex flex-col justify-between items-center"
       style={{ minHeight: "500px" }}
     >
       {result ? (
         <>
           <div
             id="result"
-            className="bg-white p-8 my-8 rounded-lg shadow-lg mt-6"
+            className="bg-white p-8 my-8 md:w-auto mx-20 rounded-lg shadow-lg mt-6"
           >
             <strong className="text-2xl font-semibold text-gray-800">
               Recommended Careers:
@@ -226,7 +227,9 @@ const CareerQuiz = () => {
               </p>
             </div>
           </div>
-          {result && <AskQuestions category={result[0].careerName} />}
+          <div className="flex justify-center items-center">
+            {result && <AskQuestions category={result[0].careerName} />}
+          </div>
         </>
       ) : (
         <>
