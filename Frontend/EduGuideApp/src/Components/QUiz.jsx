@@ -6,11 +6,13 @@ import { useNavigate } from "react-router-dom";
 function QUiz() {
   const [cookies] = useCookies(["email", "name"]);
   const navigate = useNavigate();
+  // const history = useHistory();
 
   useEffect(() => {
     // If there is no email in cookies, redirect to login page
     if (!cookies.email) {
-      navigate("/Register");
+      // history.push("/register");
+      navigate("/register", { replace: true });
     }
   }, [cookies.email, navigate]);
 

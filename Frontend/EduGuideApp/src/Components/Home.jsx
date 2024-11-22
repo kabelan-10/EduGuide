@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import img2 from "/src/rb_2148571733.png";
 import imgSrc from "/src/rb_2150314523.png";
 const HomePage = () => {
+  // const history = useHistory();
   return (
     <>
       <div className="min-h-screen flex items-center justify-center bg-white px-6 md:px-16">
